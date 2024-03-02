@@ -5,6 +5,7 @@ function sum(arr) {
   for(let mindNumber = 0; mindNumber < arr.length; mindNumber++) {
      result += arr[mindNumber]
   }
+  document.write(result);
   return result;
 }
-document.write(sum([18, 7, 9, 0, 6]));
+sum([18, 7, 9, 0, 6]);

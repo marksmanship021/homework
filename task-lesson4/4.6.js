@@ -9,3 +9,14 @@
 //     `);
 // }
 // bringLight("amazing");
+
+let bringLight = (text) => {
+    document.write(`
+    <ul>
+      <li>${text}</li>
+      <li>${text}</li>
+      <li>${text}</li>
+    </ul>
+  `);
+}
+bringLight("amazing");

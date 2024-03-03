@@ -9,3 +9,10 @@
 // }
 // }
 // letsGo([13, 8, "JavaScript", false, 100, "hello world!"]);
+
+let letsGo = (arrayPremiere) => {
+    for(const prima in arrayPremiere) {
+        document.write(`<div><li>${arrayPremiere[prima]}</li></div>`); 
+        }
+}
+letsGo([13, 8, "JavaScript", false, 100, "hello world!"]);

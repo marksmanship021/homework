@@ -1,7 +1,4 @@
-// let str = 'Ревуть воли як ясла повні';
-// let arr = stringToarray(str); ['Ревуть', 'воли', 'як', 'ясла', 'повні']
-function stringToarray(str) {
-        let result = str.split()
-        document.write(`<div>${result}</div>`)
-}
-stringToarray('Ревуть воли як ясла повні');
+// - Взяти масив (Client [] з попереднього завдання).Відсортувати його по кількості товарів в полі order по зростанню. (sort)
+
+
+console.log(clients.sort((a, b) => a.order.length - b.order.length));

@@ -1,18 +1,43 @@
-let coursesAndDurationArray = [
-    {title: 'JavaScript Complex', monthDuration: 5},
-    {title: 'Java Complex', monthDuration: 6},
-    {title: 'Python Complex', monthDuration: 6},
-    {title: 'QA Complex', monthDuration: 4},
-    {title: 'FullStack', monthDuration: 7},
-    {title: 'Frontend', monthDuration: 4}
-];
-//  -- відсортувати його за спаданням за monthDuration
-//  -- відфільтрувати , залишивши тільки курси з тривалістю більше 5 місяців
-//  -- за допомоги map перетворити кожен елемент на наступний тип {id,title,monthDuration}
+// -створити класс/функцію конструктор попелюшка з полями ім'я, вік, розмір ноги. Створити масив з 10 попелюшок.
+// Сторити об'єкт класу "принц" за допомоги класу який має поля ім'я, вік, туфелька яку він знайшов.
+// За допомоги циклу знайти яка попелюшка повинна бути з принцом.
+// Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку
 
-console.log(coursesAndDurationArray.sort((a, b) => b.monthDuration - a.monthDuration))
-console.log(coursesAndDurationArray.filter((item) => item.monthDuration > 5))
-const arc = coursesAndDurationArray.map((a, b) => {
-    return {id: b + 1, ...a}
-});
-console.log(arc);
+class Popelushka {
+   constructor(name, age, footSize) {
+    this.name = name
+    this.age = age
+    this.footSize = footSize
+   }
+}
+
+const Cinderella = [
+    new Popelushka('Asya', 18, 36),
+    new Popelushka('Belyana', 20, 37),
+    new Popelushka('Varvara', 19, 35),
+    new Popelushka('Galina', 22, 38),
+    new Popelushka('Dana', 21, 36),
+    new Popelushka('Eva', 23, 39),
+    new Popelushka('Zhana', 25, 37),
+    new Popelushka('Zoya', 24, 38),
+    new Popelushka('Inna', 20, 35),
+    new Popelushka('Katya', 19, 37)
+]
+
+class Prince {
+   constructor(name, age, shoe){
+    this.name = name
+    this.age = age
+    this.shoe = shoe
+   }
+
+
+findPrincess(arr) {
+ for (let princess of arr) 
+    if (princess.footSize === this.shoe)
+        return princess;
+}
+}
+
+const prince = new Prince('Marko', 17, 39);
+console.log(prince.findPrincess(Cinderella));
